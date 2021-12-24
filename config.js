@@ -6,7 +6,7 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: '192.168.0.105',
+        domain: '192.168.0.194',
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
@@ -18,14 +18,14 @@ var config = {
         // focus: 'focus.192.168.0.105',
 
         // XMPP MUC domain. FIXME: use XEP-0030 to discover it.
-        muc: 'conference.192.168.0.105'
+        muc: 'conference.192.168.0.194'
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//192.168.0.105/http-bind',
+    bosh: '//192.168.0.194/http-bind',
 
     // Websocket URL
-    // websocket: 'wss://192.168.0.105/xmpp-websocket',
+    // websocket: 'wss://192.168.0.194/xmpp-websocket',
 
     // The name of client node advertised in XEP-0115 'c' stanza
     clientNode: 'http://jitsi.org/jitsimeet',
@@ -109,7 +109,7 @@ var config = {
 
     // Start the conference in audio only mode (no video is being received nor
     // sent).
-    // startAudioOnly: false,
+    startAudioOnly: true,
 
     // Every participant after the Nth will start audio muted.
     // startAudioMuted: 10,
@@ -452,13 +452,13 @@ var config = {
     // - it's impossible to control the placement of buttons
     // - 'desktop' controls the "Share your screen" button
     // - if `toolbarButtons` is undefined, we fallback to enabling all buttons on the UI
-    // toolbarButtons: [
-    //    'microphone', 'camera', 'closedcaptions', 'desktop', 'embedmeeting', 'fullscreen',
-    //    'fodeviceselection', 'hangup', 'profile', 'chat', 'recording',
-    //    'livestreaming', 'etherpad', 'sharedvideo', 'shareaudio', 'settings', 'raisehand',
-    //    'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-    //    'tileview', 'select-background', 'download', 'help', 'mute-everyone', 'mute-video-everyone', 'security'
-    // ],
+     toolbarButtons: [
+        'microphone', 'camera', 'closedcaptions', 'desktop','participants-pane', /*'embedmeeting',*/ 'fullscreen',
+        'fodeviceselection', 'hangup', /*'profile',*/ 'chat', /*'recording',*/
+        /*'livestreaming', 'etherpad', 'sharedvideo', 'shareaudio',*/ 'settings', 'raisehand',
+        'videoquality', 'filmstrip', 'invite', /*'feedback', 'stats',*/ 'shortcuts',
+        'tileview', 'select-background', /*'download', 'help', 'mute-everyone', 'mute-video-everyone',*/ 'security'
+     ],
 
     // Stats
     //
@@ -647,7 +647,7 @@ var config = {
 
     // If true, any checks to handoff to another application will be prevented
     // and instead the app will continue to display in the current browser.
-    // disableDeepLinking: false,
+    disableDeepLinking: true,
 
     // A property to disable the right click context menu for localVideo
     // the menu has option to flip the locally seen video for local presentations
