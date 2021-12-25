@@ -51,7 +51,7 @@ var interfaceConfig = {
      */
     CONNECTION_INDICATOR_DISABLED: false,
 
-    DEFAULT_BACKGROUND: '#474747',
+    DEFAULT_BACKGROUND: '#181818',
     DEFAULT_LOCAL_DISPLAY_NAME: 'me',
     DEFAULT_LOGO_URL: 'images/Workfreeli_logo_full_connect.png',
     DEFAULT_REMOTE_DISPLAY_NAME: 'Guest User',
@@ -202,7 +202,7 @@ var interfaceConfig = {
      */
     SUPPORT_URL: 'https://community.jitsi.org/',
 
-    TOOLBAR_ALWAYS_VISIBLE: false,
+    TOOLBAR_ALWAYS_VISIBLE: true,
 
     /**
      * DEPRECATED!
