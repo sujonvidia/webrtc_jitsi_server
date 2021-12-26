@@ -8,7 +8,7 @@ import { createToolbarEvent, sendAnalytics } from '../../analytics';
 import { Icon, IconInviteMore } from '../../base/icons';
 import { beginAddPeople } from '../../invite';
 
-import { ParticipantInviteButton , ParticipantAddButton } from './styled';
+import { ParticipantInviteButton , ParticipantAddButton, ParticipantGroupButton } from './styled';
 
 export const InviteButton = () => {
     const dispatch = useDispatch();
@@ -23,6 +23,10 @@ export const InviteButton = () => {
         parent.postMessage("myevent", "*")
     };
 
+    const onGroupAdd = () => {
+        parent.postMessage("mygroup", "*")
+    };
+
     return (
         <>
         <ParticipantInviteButton
@@ -33,6 +37,7 @@ export const InviteButton = () => {
                 src = { IconInviteMore } />
             <span>{t('participantsPane.actions.invite')}</span>
         </ParticipantInviteButton>
+        
         <ParticipantAddButton
             aria-label = "Add Someone"
             onClick = { onAdd }>
@@ -41,6 +46,17 @@ export const InviteButton = () => {
                 src = { IconInviteMore } />
             <span>Add Someone</span>
         </ParticipantAddButton>
+        {window.conversation_type =='group' ? 
+        <ParticipantGroupButton id = "add_member_group" 
+            aria-label = "Add Group Member"
+            onClick = { onGroupAdd }>
+            <Icon
+                size = { 20 }
+                src = { IconInviteMore } />
+            <span>Add Group Member</span>
+        </ParticipantGroupButton>
+        : ''}
+
         </>
     );
 };

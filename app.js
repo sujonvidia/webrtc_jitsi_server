@@ -24,7 +24,27 @@ if (window.Olm) {
         delete window.Olm;
     });
 }
+window.addEventListener('message', handleMessage, false);
+function handleMessage(e) {
+    // debugger;
+    
+    if(e.data.type=='add_member_group'){
+        window.conversation_type = e.data.conversation_type;
+        console.log('handleMessage',window.conversation_type);
+        // document.getElementById('add_member_group').style.display = "flex";
 
+    }
+
+    // Reference to element for data display
+    // var el = document.getElementById('display');
+    // // Check origin
+    // if ( e.origin === 'http://www.example.com' ) {
+    //     // Retrieve data sent in postMessage
+    //     el.innerHTML = e.data;
+    //     // Send reply to source of message
+    //     e.source.postMessage('Message received', e.origin);
+    // }
+}
 window.APP = {
     API,
     conference,
