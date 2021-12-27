@@ -28,7 +28,7 @@ window.addEventListener('message', handleMessage, false);
 function handleMessage(e) {
     // debugger;
     
-    if(e.data.type=='add_member_group'){
+    if(e.data && e.data.type && e.data.type=='add_member_group'){
         window.conversation_type = e.data.conversation_type;
         console.log('handleMessage',window.conversation_type);
         // document.getElementById('add_member_group').style.display = "flex";
