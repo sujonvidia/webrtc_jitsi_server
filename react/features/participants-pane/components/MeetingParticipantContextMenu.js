@@ -353,14 +353,14 @@ class MeetingParticipantContextMenu extends Component<Props, State> {
                             </>
                         )
                     }
-                    {
+                    {/*
                         _isChatButtonEnabled && (
                             <ContextMenuItem onClick = { this._onSendPrivateMessage }>
                                 <ContextMenuIcon src = { IconMessage } />
                                 <span>{t('toolbar.accessibilityLabel.privateMessage')}</span>
                             </ContextMenuItem>
                         )
-                    }
+                    */}
                 </ContextMenuItemGroup>
             </ContextMenu>
         );

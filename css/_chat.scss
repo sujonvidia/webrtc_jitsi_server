@@ -20,7 +20,7 @@
         left: 0;
     }
 }
-
+*[id^=‘privmsglink_’] {display:none}
 #chatconversation {
     box-sizing: border-box;
     flex: 1;
