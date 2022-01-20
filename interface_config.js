@@ -116,7 +116,7 @@ var interfaceConfig = {
      */
     HIDE_INVITE_MORE_HEADER: false,
 
-    INITIAL_TOOLBAR_TIMEOUT: 20000,
+    INITIAL_TOOLBAR_TIMEOUT: 3000,
     JITSI_WATERMARK_LINK: 'https://bd.freeli.io',
 
     LANG_DETECTION: true, // Allow i18n to detect the system language
@@ -202,7 +202,7 @@ var interfaceConfig = {
      */
     SUPPORT_URL: 'https://community.jitsi.org/',
 
-    TOOLBAR_ALWAYS_VISIBLE: true,
+    TOOLBAR_ALWAYS_VISIBLE: false,
 
     /**
      * DEPRECATED!
@@ -216,7 +216,7 @@ var interfaceConfig = {
     //     'tileview', 'select-background', 'download', 'help', 'mute-everyone', 'mute-video-everyone', 'security'
     // ],
 
-    TOOLBAR_TIMEOUT: 4000,
+    TOOLBAR_TIMEOUT: 3000,
 
     // Browsers, in addition to those which do not fully support WebRTC, that
     // are not supported and should show the unsupported browser page.
