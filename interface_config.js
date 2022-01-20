@@ -116,7 +116,7 @@ var interfaceConfig = {
      */
     HIDE_INVITE_MORE_HEADER: false,
 
-    INITIAL_TOOLBAR_TIMEOUT: 3000,
+    INITIAL_TOOLBAR_TIMEOUT: 20000,
     JITSI_WATERMARK_LINK: 'https://bd.freeli.io',
 
     LANG_DETECTION: true, // Allow i18n to detect the system language
