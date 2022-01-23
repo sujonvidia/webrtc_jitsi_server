@@ -7,8 +7,8 @@
       "platform": "chromeos_play"
     }
   ],
-  "short_name": "Freeli Meet",
-  "name": "Freeli Meet",
+  "short_name": "Workfreeli Connect",
+  "name": "Workfreeli Connect",
   "icons": [
     {
       "src": "static/pwa/icons/icon192.png",
