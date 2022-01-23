@@ -239,7 +239,7 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    VIDEO_QUALITY_LABEL_DISABLED: false,
+    VIDEO_QUALITY_LABEL_DISABLED: true,
 
     /**
      * How many columns the tile view can expand to. The respected range is
