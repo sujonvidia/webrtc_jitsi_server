@@ -514,7 +514,7 @@ var config = {
         // the WebRTC standard:
         // https://www.w3.org/TR/webrtc/#rtcicetransportpolicy-enum.
         // If not set, the effective value is 'all'.
-        //iceTransportPolicy: 'relay',
+        iceTransportPolicy: 'relay',
 
         // If set to true, it will prefer to use H.264 for P2P calls (if H.264
         // is supported). This setting is deprecated, use preferredCodec instead.
