@@ -6,7 +6,7 @@ var config = {
 
     hosts: {
         // XMPP domain.
-        domain: '192.168.0.194',
+        domain: 'wfvs001.freeli.io',
 
         // When using authentication, domain for guest users.
         // anonymousdomain: 'guest.example.com',
@@ -18,14 +18,14 @@ var config = {
         // focus: 'focus.192.168.0.105',
 
         // XMPP MUC domain. FIXME: use XEP-0030 to discover it.
-        muc: 'conference.192.168.0.194'
+        muc: 'conference.wfvs001.freeli.io'
     },
 
     // BOSH URL. FIXME: use XEP-0156 to discover it.
-    bosh: '//192.168.0.194/http-bind',
+    bosh: '//wfvs001.freeli.io/http-bind',
 
     // Websocket URL
-    // websocket: 'wss://192.168.0.194/xmpp-websocket',
+    // websocket: 'wss://wfvs001.freeli.io/xmpp-websocket',
 
     // The name of client node advertised in XEP-0115 'c' stanza
     clientNode: 'http://jitsi.org/jitsimeet',
