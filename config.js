@@ -165,11 +165,11 @@ var config = {
     // enableLayerSuspension: false,
 
     // Every participant after the Nth will start video muted.
-    startVideoMuted: 0,
+    //startVideoMuted: 10,
 
     // Start calls with video muted. Unlike the option above, this one is only
     // applied locally. FIXME: having these 2 options is confusing.
-    startWithVideoMuted: true,
+    //startWithVideoMuted: true,
 
     // If set to true, prefer to use the H.264 video codec (if supported).
     // Note that it's not recommended to do this because simulcast is not
@@ -378,7 +378,7 @@ var config = {
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
-    enableWelcomePage: false,
+    enableWelcomePage: true,
 
     // Disable app shortcuts that are registered upon joining a conference
     // disableShortcuts: false,
@@ -514,7 +514,7 @@ var config = {
         // the WebRTC standard:
         // https://www.w3.org/TR/webrtc/#rtcicetransportpolicy-enum.
         // If not set, the effective value is 'all'.
-        iceTransportPolicy: 'relay',
+        //iceTransportPolicy: 'relay',
 
         // If set to true, it will prefer to use H.264 for P2P calls (if H.264
         // is supported). This setting is deprecated, use preferredCodec instead.
