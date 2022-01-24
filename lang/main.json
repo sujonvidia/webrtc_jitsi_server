@@ -357,7 +357,7 @@
         "answer": "Answer",
         "audioCallTitle": "Incoming call",
         "decline": "Dismiss",
-        "productLabel": "from Workfreeli Connect",
+        "productLabel": "from WorkFreeli Connect",
         "videoCallTitle": "Incoming video call"
     },
     "info": {
@@ -523,7 +523,7 @@
         "newDeviceAudioTitle": "New audio device detected",
         "newDeviceAction": "Use",
         "OldElectronAPPTitle": "Security vulnerability!",
-        "oldElectronClientDescription1": "You appear to be using an old version of the Workfreeli Connect client which has known security vulnerabilities. Please make sure you update to our ",
+        "oldElectronClientDescription1": "You appear to be using an old version of the WorkFreeli Connect client which has known security vulnerabilities. Please make sure you update to our ",
         "oldElectronClientDescription2": "latest build",
         "oldElectronClientDescription3": " now!"
     },
@@ -929,7 +929,7 @@
         "getHelp": "Get help",
         "go": "GO",
         "goSmall": "GO",
-        "headerTitle": "Workfreeli Connect",
+        "headerTitle": "WorkFreeli Connect",
         "headerSubtitle": "Transmission of all messages, files and calls are point-to-point encrypted.",
         "info": "Dial-in info",
         "join": "CREATE / JOIN",
