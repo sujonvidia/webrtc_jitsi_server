@@ -153,6 +153,8 @@ class OverflowMenuButton extends Component<Props> {
      */
     _renderToolbarButton() {
         const { ariaControls, isOpen, t } = this.props;
+        if(isOpen) parent.postMessage("loadingdot_hide", "*")
+        else parent.postMessage("loadingdot_show", "*")
 
         return (
             <ToolbarButton
