@@ -60,7 +60,7 @@ export const LobbyParticipantList = () => {
             </div>
             <div
                 className = { classes.link }
-                onClick = { admitAll }>admitAll</div>
+                onClick = { admitAll }>Admit All</div>
         </div>
         <div>
             {participants.map(p => (
