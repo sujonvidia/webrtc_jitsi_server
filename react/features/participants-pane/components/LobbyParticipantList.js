@@ -43,6 +43,11 @@ export const LobbyParticipantList = () => {
         dispatch(admitMultiple(participants));
     }, [ dispatch, participants ]);
 
+    if(participants.length){
+        parent.postMessage("lobby_show", "*");
+    }else{
+        parent.postMessage("lobby_hide", "*");
+    }
     if (!lobbyEnabled || !participants.length) {
         return null;
     }
@@ -55,7 +60,7 @@ export const LobbyParticipantList = () => {
             </div>
             <div
                 className = { classes.link }
-                onClick = { admitAll }>{t('lobby.admitAll')}</div>
+                onClick = { admitAll }>admitAll</div>
         </div>
         <div>
             {participants.map(p => (
