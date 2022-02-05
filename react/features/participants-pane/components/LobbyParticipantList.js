@@ -43,11 +43,7 @@ export const LobbyParticipantList = () => {
         dispatch(admitMultiple(participants));
     }, [ dispatch, participants ]);
 
-    if(participants.length){
-        parent.postMessage("lobby_show", "*");
-    }else{
-        parent.postMessage("lobby_hide", "*");
-    }
+    
     if (!lobbyEnabled || !participants.length) {
         return null;
     }

@@ -49,7 +49,6 @@
     overflow-y: auto;
     position: fixed;
     top: 30px;
-    display:none;
     z-index: $toolbarZ + 1;
 
     &.toolbox-visible {

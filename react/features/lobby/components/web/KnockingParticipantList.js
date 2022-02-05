@@ -31,7 +31,13 @@ class KnockingParticipantList extends AbstractKnockingParticipantList<Props> {
     render() {
         const { _participants, _visible, t } = this.props;
 
-        if (!_visible) {
+        if(_visible){
+            parent.postMessage("lobby_show", "*");
+        }else{
+            parent.postMessage("lobby_hide", "*");
+        }
+
+        if (_visible==false) {
             return null;
         }
 
