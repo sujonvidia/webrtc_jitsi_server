@@ -15,7 +15,7 @@ import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import OutsideClickHandler from 'react-outside-click-handler';
 
-
+console.log('cache:version:5059');
 /** 
  * The type of the React {@code Component} props of {@link ChatInput}.
  */
