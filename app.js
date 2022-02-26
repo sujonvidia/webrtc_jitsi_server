@@ -35,6 +35,7 @@ function handleMessage(e) {
 
     }else if(e.data && e.data.type && e.data.type=='change_profile_pic'){
         document.getElementById('dominantSpeakerAvatar').src= e.data.img;
+        document.getElementById("dominantSpeakerAvatar").style.display = "inline";
     }
 
     // Reference to element for data display
