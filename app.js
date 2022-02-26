@@ -27,12 +27,14 @@ if (window.Olm) {
 window.addEventListener('message', handleMessage, false);
 function handleMessage(e) {
     // debugger;
-    
+    console.log('handleMessage',e.data);    
     if(e.data && e.data.type && e.data.type=='add_member_group'){
         window.conversation_type = e.data.conversation_type;
-        console.log('handleMessage',window.conversation_type);
+        
         // document.getElementById('add_member_group').style.display = "flex";
 
+    }else if(e.data && e.data.type && e.data.type=='change_profile_pic'){
+        document.getElementById('dominantSpeakerAvatar').src= e.data.img;
     }
 
     // Reference to element for data display
