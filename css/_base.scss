@@ -114,7 +114,8 @@ form {
 }
 
 .watermark {
-    display: block;
+    /*display: block;*/
+    display:none;
     position: absolute;
     top: 15;
     width: $watermarkWidth;
