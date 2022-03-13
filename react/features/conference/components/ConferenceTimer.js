@@ -73,7 +73,14 @@ class ConferenceTimer extends Component<Props, State> {
      * @inheritdoc
      */
     componentDidMount() {
-        this._startTimer();
+        // this._startTimer();
+        window.addEventListener("message", (e) => {
+           if(e.data && e.data.type && e.data.type == 'conference_timer'){
+                // alert(e.data.time);
+                this._startTimer();
+            
+            }
+        });
     }
 
     /**
@@ -123,6 +130,10 @@ class ConferenceTimer extends Component<Props, State> {
         const timerMsValue = currentValueUTC - refValueUTC;
 
         const localizedTime = getLocalizedDurationFormatter(timerMsValue);
+
+        if(localizedTime == "30:00"){
+            parent.postMessage("hangup_call", "*");
+        }
 
         this.setState({
             timerValue: localizedTime

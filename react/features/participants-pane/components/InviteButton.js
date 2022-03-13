@@ -24,7 +24,7 @@ export const InviteButton = () => {
     };
 
     const onGroupAdd = () => {
-        parent.postMessage("mygroup", "*")
+        parent.postMessage("mygroup", "*");
     };
 
     return (
