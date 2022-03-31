@@ -533,7 +533,7 @@
             "participantsList": "Meeting participants ({{count}})"
         },
         "actions": {
-            "invite": "Invite Someone",
+            "invite": "Share a call link to anyone",
             "muteAll": "Mute all",
             "stopVideo": "Stop video"
         }
@@ -769,7 +769,7 @@
             "Settings": "Toggle settings",
             "shareaudio": "Share audio",
             "sharedvideo": "Toggle YouTube video sharing",
-            "shareRoom": "Invite someone",
+            "shareRoom": "Share a call link to anyone",
             "shareYourScreen": "Toggle screenshare",
             "shortcuts": "Toggle shortcuts",
             "show": "Show on stage",
@@ -830,7 +830,7 @@
         "Settings": "Settings",
         "shareaudio": "Share audio",
         "sharedvideo": "Share video",
-        "shareRoom": "Invite someone",
+        "shareRoom": "Share a call link to anyone",
         "shortcuts": "View shortcuts",
         "speakerStats": "Speaker stats",
         "startScreenSharing": "Start screen sharing",

@@ -39,21 +39,21 @@ export const InviteButton = () => {
         </ParticipantInviteButton>
         
         <ParticipantAddButton
-            aria-label = "Add Someone"
+            aria-label = "Call Teammate(s) to join"
             onClick = { onAdd }>
             <Icon
                 size = { 20 }
                 src = { IconInviteMore } />
-            <span>Add Someone</span>
+            <span>Call Teammate(s) to join</span>
         </ParticipantAddButton>
         {window.conversation_type =='group' ? 
         <ParticipantGroupButton id = "add_member_group" 
-            aria-label = "Add Group Member"
+            aria-label = "Call Roommate(s) to join"
             onClick = { onGroupAdd }>
             <Icon
                 size = { 20 }
                 src = { IconInviteMore } />
-            <span>Add Group Member</span>
+            <span>Call Roommate(s) to join</span>
         </ParticipantGroupButton>
         : ''}
 
