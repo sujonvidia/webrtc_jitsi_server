@@ -41,7 +41,7 @@ type Props = AbstractButtonProps & {
 class ReactionsMenuButton extends AbstractButton<Props, *> {
     accessibilityLabel = 'toolbar.accessibilityLabel.reactionsMenu';
     icon = IconRaisedHand;
-    label = 'toolbar.openReactionsMenu';
+    label = 'Raise Hand or React to Call';
     toggledLabel = 'toolbar.closeReactionsMenu';
 
     /**

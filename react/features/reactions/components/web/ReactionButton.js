@@ -89,7 +89,7 @@ class ReactionButton extends AbstractToolbarButton<Props> {
     _renderButton(children) {
         return (
             <div
-                aria-label = { this.props.accessibilityLabel }
+                aria-label = 'Raise Hand or React to Call'
                 aria-pressed = { this.props.toggled }
                 className = 'toolbox-button'
                 onClick = { this.props.onClick }

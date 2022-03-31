@@ -104,7 +104,8 @@ function ReactionsMenuButton({
         <div className = 'reactions-menu-popup-container'>
             <ReactionsMenuPopup>
                 <ToolbarButton
-                    accessibilityLabel = { t('toolbar.accessibilityLabel.reactionsMenu') }
+                    // accessibilityLabel = { t('toolbar.accessibilityLabel.reactionsMenu') }
+                    accessibilityLabel = 'Raise Hand or React to Call'
                     icon = { IconRaisedHand }
                     key = 'reactions'
                     onClick = { toggleReactionsMenu }
