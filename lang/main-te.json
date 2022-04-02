@@ -958,7 +958,7 @@
     },
     "lobby": {
         "admit": "అనుమతించు",
-        "knockingParticipantList": "Knocking participant list",
+        "knockingParticipantList": "Requesting to join the call",
         "allow": "అనుమతించు",
         "backToKnockModeButton": "సంకేతపదం లేదు, చేర్చుకోమని అడుగు",
         "dialogTitle": "Lobby mode",

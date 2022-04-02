@@ -959,7 +959,7 @@
     },
     "lobby": {
         "admit": "Admit",
-        "knockingParticipantList": "Knocking participant list",
+        "knockingParticipantList": "Requesting to join the call",
         "allow": "Allow",
         "backToKnockModeButton": "No password, ask to join instead",
         "dialogTitle": "Lobby mode",

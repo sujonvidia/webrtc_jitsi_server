@@ -895,7 +895,7 @@
         "header": "സഹായകേന്ദ്രം"
     },
     "lobby": {
-        "knockingParticipantList": "Knocking participant list",
+        "knockingParticipantList": "Requesting to join the call",
         "allow": "അനുവദിക്കുക",
         "backToKnockModeButton": "പാസ്‌വേഡ് ഇല്ല, പകരം ചേരാൻ ആവശ്യപ്പെടുക",
         "dialogTitle": "ലോബി മോഡ്",
