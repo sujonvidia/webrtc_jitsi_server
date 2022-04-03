@@ -7,6 +7,12 @@ import { translate } from '../../../../base/i18n';
 import { copyText } from '../../../../base/util';
 
 import PasswordForm from './PasswordForm';
+import { useDispatch } from 'react-redux';
+import {
+    hideNotification,
+    NOTIFICATION_TIMEOUT,
+    showNotification
+} from '../../../../notifications';
 
 type Props = {
 
@@ -75,6 +81,7 @@ function PasswordSection({
     t }: Props) {
 
     const formRef: Object = useRef(null);
+    const dispatch = useDispatch();
 
     /**
      * Callback invoked to set a password on the current JitsiConference.
@@ -86,6 +93,19 @@ function PasswordSection({
      */
     function onPasswordSubmit(enteredPassword) {
         setPassword(conference, conference.lock, enteredPassword);
+        if(enteredPassword){
+            dispatch(showNotification({
+                titleKey: 'toolbar.passwordSetTitle',
+                // descriptionKey: 'toolbar.noisyAudioInputDesc'
+            },NOTIFICATION_TIMEOUT));
+        }else{
+            dispatch(showNotification({
+                titleKey: 'toolbar.passwordUnsetTitle',
+                // descriptionKey: 'toolbar.noisyAudioInputDesc'
+            },NOTIFICATION_TIMEOUT));
+
+        }
+        
     }
 
     /**

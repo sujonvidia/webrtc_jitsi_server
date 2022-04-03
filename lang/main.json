@@ -819,6 +819,8 @@
         "noAudioSignalDialInLinkDesc": "Dial-in numbers",
         "noisyAudioInputTitle": "Your microphone appears to be noisy!",
         "noisyAudioInputDesc": "It sounds like your microphone is making noise, please consider muting or changing the device.",
+        "passwordSetTitle": "A password has been set to join this call!",
+        "passwordUnsetTitle": "The password to join the call has been removed!",
         "openChat": "Open chat",
         "participants": "Participants",
         "pip": "Enter Picture-in-Picture mode",
