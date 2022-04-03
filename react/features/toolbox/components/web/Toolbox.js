@@ -268,7 +268,7 @@ class Toolbox extends Component<Props> {
      * @returns {void}
      */
     componentDidMount() {
-        const { _toolbarButtons } = this.props;
+        const { _toolbarButtons , dispatch, _participantsPaneOpen } = this.props;
         const KEYBOARD_SHORTCUTS = [
             isToolbarButtonEnabled('videoquality', _toolbarButtons) && {
                 character: 'A',
@@ -316,6 +316,13 @@ class Toolbox extends Component<Props> {
                     shortcut.helpDescription);
             }
         });
+        window.addEventListener('message', function handleMessage(e) {
+            if(e.data && e.data.type && e.data.type == 'show_participant_pane'){
+                dispatch(openParticipantsPane());
+            }
+        }, false);
+        
+        
     }
 
     /**
@@ -994,6 +1001,12 @@ class Toolbox extends Component<Props> {
      * @returns {void}
      */
     _onToolbarToggleChat() {
+        if(this.props._chatOpen){
+            parent.postMessage("raisehand_show", "*");
+        }else{
+            parent.postMessage("raisehand_hide", "*");
+            
+        }
         sendAnalytics(createToolbarEvent(
             'toggle.chat',
             {
