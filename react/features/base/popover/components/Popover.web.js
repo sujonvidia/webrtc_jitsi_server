@@ -202,6 +202,7 @@ class Popover extends Component<Props, State> {
      */
     render() {
         const { children, className, content, id, overflowDrawer, position } = this.props;
+        console.log('pop_over',this.props)
 
         if (overflowDrawer) {
             return (
@@ -231,7 +232,7 @@ class Popover extends Component<Props, State> {
                 <InlineDialog
                     content = { this._renderContent() }
                     isOpen = { this.state.showDialog }
-                    placement = { position }>
+                    placement = 'auto'>
                     { children }
                 </InlineDialog>
             </div>

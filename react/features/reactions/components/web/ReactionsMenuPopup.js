@@ -48,7 +48,7 @@ function ReactionsMenuPopup({
                 content = { <ReactionsMenu /> }
                 isOpen = { isOpen }
                 onClose = { onClose }
-                placement = 'top'>
+                placement = 'auto'>
                 {children}
             </InlineDialog>
         </div>

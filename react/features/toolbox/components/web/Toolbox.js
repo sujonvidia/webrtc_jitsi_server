@@ -564,6 +564,13 @@ class Toolbox extends Component<Props> {
             group: 2
         };
 
+        const participants = {
+            key: 'lobby-icon',
+            Content: ParticipantsPaneButton,
+            handleClick: this._onToolbarToggleParticipantsPane,
+            group: 2
+        };
+
         const tileview = {
             key: 'tileview',
             Content: TileViewButton,
