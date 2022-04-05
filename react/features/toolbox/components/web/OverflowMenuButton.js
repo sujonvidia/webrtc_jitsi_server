@@ -107,7 +107,7 @@ class OverflowMenuButton extends Component<Props> {
      */
     render() {
         const { children, isOpen, overflowDrawer, reactionsQueue, showMobileReactions } = this.props;
-
+        console.log('overflowDrawer',this.props);
         return (
             <div className = 'toolbox-button-wth-dialog'>
                 {
@@ -135,7 +135,7 @@ class OverflowMenuButton extends Component<Props> {
                             content = { children }
                             isOpen = { isOpen }
                             onClose = { this._onCloseDialog }
-                            placement = 'top-end'>
+                            placement = 'auto'>
                             {this._renderToolbarButton()}
                         </InlineDialog>
                     )
