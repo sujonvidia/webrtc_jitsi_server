@@ -85,6 +85,7 @@ export { default as IconNotificationJoin } from './navigate_next.svg';
 export { default as IconOpenInNew } from './open_in_new.svg';
 export { default as IconOutlook } from './office365.svg';
 export { default as IconParticipants } from './participants.svg';
+export { default as IconLobby } from './lobby.svg';
 export { default as IconPhone } from './phone.svg';
 export { default as IconPin } from './enlarge.svg';
 export { default as IconPlane } from './paper-plane.svg';

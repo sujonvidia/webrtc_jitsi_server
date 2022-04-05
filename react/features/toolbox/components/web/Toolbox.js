@@ -35,6 +35,7 @@ import {
     open as openParticipantsPane
 } from '../../../participants-pane/actions';
 import ParticipantsPaneButton from '../../../participants-pane/components/ParticipantsPaneButton';
+import LobbyIconButton from '../../../participants-pane/components/LobbyIconButton';
 import { getParticipantsPaneOpen } from '../../../participants-pane/functions';
 import { ReactionsMenuButton } from '../../../reactions/components';
 import {
@@ -253,6 +254,7 @@ class Toolbox extends Component<Props> {
         this._onShortcutToggleScreenshare = this._onShortcutToggleScreenshare.bind(this);
         this._onShortcutToggleVideoQuality = this._onShortcutToggleVideoQuality.bind(this);
         this._onToolbarToggleParticipantsPane = this._onToolbarToggleParticipantsPane.bind(this);
+        this._onToolbarToggleLobby = this._onToolbarToggleLobby.bind(this);
         this._onToolbarOpenVideoQuality = this._onToolbarOpenVideoQuality.bind(this);
         this._onToolbarToggleChat = this._onToolbarToggleChat.bind(this);
         this._onToolbarToggleFullScreen = this._onToolbarToggleFullScreen.bind(this);
@@ -531,6 +533,13 @@ class Toolbox extends Component<Props> {
             group: 0
         };
 
+         const lobbyicon = {
+            key: 'lobby-icon',
+            Content: LobbyIconButton,
+            handleClick: this._onToolbarToggleLobby,
+            group: 0
+        };
+
         const profile = this._isProfileVisible() && {
             key: 'profile',
             Content: ProfileButton,
@@ -564,12 +573,7 @@ class Toolbox extends Component<Props> {
             group: 2
         };
 
-        const participants = {
-            key: 'lobby-icon',
-            Content: ParticipantsPaneButton,
-            handleClick: this._onToolbarToggleParticipantsPane,
-            group: 2
-        };
+       
 
         const tileview = {
             key: 'tileview',
@@ -712,6 +716,7 @@ class Toolbox extends Component<Props> {
             desktop,
             chat,
             raisehand,
+            lobbyicon,
             participants,
             tileview,
             videoQuality,
@@ -981,6 +986,26 @@ class Toolbox extends Component<Props> {
         } else {
             dispatch(openParticipantsPane());
         }
+    }
+
+    _onToolbarToggleLobby: () => void;
+
+    /**
+     * Dispatches an action for toggling the participants pane.
+     *
+     * @private
+     * @returns {void}
+     */
+    _onToolbarToggleLobby() {
+        parent.postMessage("lobby_toggle", "*");
+        // const { dispatch, _participantsPaneOpen } = this.props;
+
+        // if (_participantsPaneOpen) {
+        //     dispatch(closeParticipantsPane());
+        // } else {
+        //     dispatch(openParticipantsPane());
+        // }
+        // alert('lobby');
     }
 
     _onToolbarOpenVideoQuality: () => void;

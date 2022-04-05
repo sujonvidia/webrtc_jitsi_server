@@ -1,7 +1,8 @@
 // @flow
 
 import { translate } from '../../base/i18n';
-import { IconParticipants } from '../../base/icons';
+// import icc from '../../base/icons';
+import { IconLobby } from '../../base/icons';
 import { connect } from '../../base/redux';
 import { AbstractButton, type AbstractButtonProps } from '../../base/toolbox/components';
 
@@ -20,10 +21,10 @@ type Props = AbstractButtonProps & {
  * Implementation of a button for accessing participants pane.
  */
 class LobbyIconButton extends AbstractButton<Props, *> {
-    accessibilityLabel = 'toolbar.accessibilityLabel.participants';
-    icon = IconParticipants;
-    label = 'toolbar.participants';
-    tooltip = 'toolbar.participants';
+    accessibilityLabel = 'toolbar.accessibilityLabel.lobbyIcon';
+    icon = IconLobby;
+    label = 'toolbar.lobbyIcon';
+    tooltip = 'toolbar.lobbyIcon';
 
     /**
      * Handles clicking / pressing the button, and opens the appropriate dialog.
