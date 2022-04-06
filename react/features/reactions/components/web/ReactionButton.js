@@ -114,7 +114,7 @@ class ReactionButton extends AbstractToolbarButton<Props> {
      */
     _renderIcon() {
         return (
-            <div className = { `toolbox-icon ${this.props.toggled ? 'toggled' : ''}` }>
+            <div className = { `toolbox-icon c3 ${this.props.toggled ? 'toggled' : ''}` }>
                 <span className = 'emoji'>{this.props.icon}</span>
                 {this.props.label && <span className = 'text'>{this.props.label}</span>}
             </div>

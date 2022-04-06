@@ -322,6 +322,14 @@ class Toolbox extends Component<Props> {
         window.addEventListener('message', function handleMessage(e) {
             if(e.data && e.data.type && e.data.type == 'show_participant_pane'){
                 dispatch(openParticipantsPane());
+            }else if(e.data && e.data.type && e.data.type == 'lobby_status'){
+                var element = document.querySelector('[aria-label="Lobby"] .toolbox-icon');
+                if(e.data.status){
+                    element.classList.add("toggled");   
+                }else{
+                    element.classList.remove("toggled");
+                }
+                
             }
         }, false);
         
