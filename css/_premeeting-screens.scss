@@ -3,10 +3,20 @@
  */
  .premeeting-screen {
      position: absolute;
-     left: 0;
      right: 0;
      top: 0;
      bottom: 0;
+     width:50%;
+  }
+
+  .premeeting-text{
+    position: absolute;
+     left: 0;
+     
+     top: 0;
+     bottom: 0;
+     width:50%;
+
   }
 
  .premeeting-screen {
@@ -97,11 +107,12 @@
     .content {
         align-items: center;
         display: flex;
-        flex: 1;
+        flex: 0;
         flex-direction: column;
         justify-content: flex-end;
         padding-bottom: 24px;
         z-index: $toolbarZ + 2;
+            margin: 104px 32px 0 32px;
 
         .title {
             color: #fff;

@@ -105,44 +105,56 @@ export default class PreMeetingScreen extends PureComponent<Props> {
         const showSharingButton = allowUrlSharing() && showCopyUrlButton;
 
         return (
-            <div
-                className = 'premeeting-screen'
-                id = 'lobby-screen'>
-                <ConnectionStatus />
-                <Preview
-                    videoMuted = { videoMuted }
-                    videoTrack = { videoTrack } />
-                <div className = 'content'>
-                    {showAvatar && videoMuted && (
-                        <Avatar
-                            className = 'premeeting-screen-avatar'
-                            displayName = { name }
-                            dynamicColor = { false }
-                            participantId = 'local'
-                            size = { 80 } />
-                    )}
-                    {showConferenceInfo && (
-                        <>
-                            <h1 className = 'title'>
-                                { title }
-                            </h1>
-                            {showSharingButton ? <CopyMeetingUrl /> : null}
-                        </>
-                    )}
-                    { this.props.children }
-                    <div className = 'media-btn-container'>
-                        <div className = 'toolbox-content'>
-                            <div className = 'toolbox-content-items'>
-                                <AudioSettingsButton visible = { true } />
-                                <VideoSettingsButton visible = { true } />
-                                { ((visibleButtons && visibleButtons.includes('select-background'))
-                                   || (visibleButtons && visibleButtons.includes('videobackgroundblur')))
-                                   && <VideoBackgroundButton visible = { checkBlurSupport() } /> }
+            <div>
+                <div className = 'premeeting-text'>
+                    <div class="welcome">
+                        <div class="header">
+                            <div className="header-container">
+                                <h1 className="header-text-title">WorkFreeli Connect</h1>
+                                <span className="header-text-subtitle">Transmission of all messages, files and calls are point-to-point encrypted.</span>
                             </div>
                         </div>
+                    </div>    
+                </div>
+                <div
+                    className = 'premeeting-screen'
+                    id = 'lobby-screen'>
+                    <ConnectionStatus />
+                    <Preview
+                        videoMuted = { videoMuted }
+                        videoTrack = { videoTrack } />
+                    <div className = 'content'>
+                        {showAvatar && videoMuted && (
+                            <Avatar
+                                className = 'premeeting-screen-avatar'
+                                displayName = { name }
+                                dynamicColor = { false }
+                                participantId = 'local'
+                                size = { 80 } />
+                        )}
+                        {showConferenceInfo && (
+                            <>
+                                <h1 className = 'title'>
+                                    { title }
+                                </h1>
+                                {showSharingButton ? <CopyMeetingUrl /> : null}
+                            </>
+                        )}
+                        { this.props.children }
+                        <div className = 'media-btn-container'>
+                            <div className = 'toolbox-content'>
+                                <div className = 'toolbox-content-items'>
+                                    <AudioSettingsButton visible = { true } />
+                                    <VideoSettingsButton visible = { true } />
+                                    { ((visibleButtons && visibleButtons.includes('select-background'))
+                                       || (visibleButtons && visibleButtons.includes('videobackgroundblur')))
+                                       && <VideoBackgroundButton visible = { checkBlurSupport() } /> }
+                                </div>
+                            </div>
+                        </div>
+                        { this.props.skipPrejoinButton }
+                        { this.props.footer }
                     </div>
-                    { this.props.skipPrejoinButton }
-                    { this.props.footer }
                 </div>
             </div>
         );

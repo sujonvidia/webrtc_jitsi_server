@@ -1,5 +1,5 @@
 // @flow
-
+import type { Dispatch } from 'redux';
 import { translate } from '../../base/i18n';
 // import icc from '../../base/icons';
 import { IconLobby } from '../../base/icons';
@@ -14,7 +14,13 @@ type Props = AbstractButtonProps & {
     /**
      * External handler for click action.
      */
-    handleClick: Function
+    handleClick: Function,
+    lobbyEnabled: boolean,
+
+    /**
+     * The redux {@code dispatch} function.
+     */
+    dispatch: Dispatch<any>
 };
 
 /**
@@ -36,5 +42,15 @@ class LobbyIconButton extends AbstractButton<Props, *> {
         this.props.handleClick();
     }
 }
+function mapStateToProps(state: Object) {
+    
+    const { lobbyEnabled } = state['features/lobby'];
+    
 
-export default translate(connect()(LobbyIconButton));
+    return {
+        lobbyEnabled: lobbyEnabled
+        
+    };
+}
+
+export default translate(connect(mapStateToProps)(LobbyIconButton));
