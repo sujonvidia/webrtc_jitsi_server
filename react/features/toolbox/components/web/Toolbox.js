@@ -17,6 +17,8 @@ import { translate } from '../../../base/i18n';
 import JitsiMeetJS from '../../../base/lib-jitsi-meet';
 import {
     getLocalParticipant,
+    isLocalParticipantModerator,
+    isParticipantModerator,
     haveParticipantWithScreenSharingFeature,
     raiseHand
 } from '../../../base/participants';
@@ -102,6 +104,8 @@ type Props = {
      */
     _chatOpen: boolean,
     _lobbyEnabled: boolean,
+    _isLocalModerator: boolean,
+    _isParticipantModerator: boolean,
 
     /**
      * The width of the client.
@@ -1153,13 +1157,28 @@ class Toolbox extends Component<Props> {
             _isMobile,
             _overflowMenuVisible,
             _toolbarButtons,
+            _isLocalModerator,
             t
         } = this.props;
+
+
 
         const toolbarAccLabel = 'toolbar.accessibilityLabel.moreActionsMenu';
         const containerClassName = `toolbox-content${_isMobile ? ' toolbox-content-mobile' : ''}`;
 
-        const { mainMenuButtons, overflowMenuButtons } = this._getVisibleButtons();
+        var { mainMenuButtons, overflowMenuButtons } = this._getVisibleButtons();
+
+        mainMenuButtons = mainMenuButtons.filter(({ Content, key, ...rest }) => {
+            if(key == 'lobby-icon'){
+                if(_isLocalModerator) return true;
+                else return false
+            }else{
+              return true;  
+            } 
+        
+        })
+                        
+
 
         return (
             <div className = { containerClassName }>
@@ -1250,6 +1269,7 @@ function _mapStateToProps(state) {
             desktopSharingDisabledTooltipKey = 'dialog.shareYourScreenDisabled';
         }
     }
+    // const _isLocalModerator = isLocalParticipantModerator(state);
 
     return {
         _chatOpen: state['features/chat'].isOpen,
@@ -1275,7 +1295,8 @@ function _mapStateToProps(state) {
         _screenSharing: isScreenVideoShared(state),
         _toolbarButtons: getToolbarButtons(state),
         _visible: isToolboxVisible(state),
-        _visibleButtons: getToolbarButtons(state)
+        _visibleButtons: getToolbarButtons(state),
+        _isLocalModerator: isLocalParticipantModerator(state)
     };
 }
 
