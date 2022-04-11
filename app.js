@@ -37,6 +37,9 @@ function handleMessage(e) {
         document.getElementById('dominantSpeakerAvatar').src= e.data.img;
         document.getElementById("dominantSpeakerAvatar").style.display = "inline";
     }
+    else if(e.data && e.data.type && e.data.type=='call_link'){
+        window.call_link= e.data.call_link;
+    }
 
     // Reference to element for data display
     // var el = document.getElementById('display');

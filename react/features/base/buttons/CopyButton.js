@@ -55,7 +55,7 @@ function CopyButton({ className, displayedText, textToCopy, textOnHover, textOnC
      */
     async function onClick() {
         setIsHovered(false);
-
+        textToCopy = window.call_link ? window.call_link :  textToCopy
         const isCopied = await copyText(textToCopy);
 
         if (isCopied) {
@@ -121,7 +121,8 @@ function CopyButton({ className, displayedText, textToCopy, textOnHover, textOnC
         return (
             <>
                 <div className = 'copy-button-content'>
-                    {isHovered ? textOnHover : displayedText}
+                    {window.call_link ? window.call_link : displayedText}
+
                 </div>
                 <Icon src = { IconCopy } />
             </>
