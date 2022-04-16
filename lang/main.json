@@ -684,7 +684,8 @@
         "startAudioMuted": "Everyone starts muted",
         "startVideoMuted": "Everyone starts hidden",
         "title": "Settings",
-        "desktopShareFramerate": "Frames per Second"
+        "desktopShareFramerate": "Frames per Second",
+        "framesPerSecond" : "frames per second"
     },
     "settingsView": {
         "advanced": "Advanced",
