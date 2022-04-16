@@ -542,6 +542,7 @@
     "passwordDigitsOnly": "Up to {{number}} digits",
     "poweredby": "powered by",
     "prejoin": {
+        "keyboardShortcuts" : "Use keyboard shortcuts",
         "audioAndVideoError": "Audio and video error:",
         "audioDeviceProblem": "There is a problem with your audio device",
         "audioOnlyError": "Audio error:",
@@ -682,7 +683,8 @@
         "speakers": "Speakers",
         "startAudioMuted": "Everyone starts muted",
         "startVideoMuted": "Everyone starts hidden",
-        "title": "Settings"
+        "title": "Settings",
+        "desktopShareFramerate": "Frames per Second"
     },
     "settingsView": {
         "advanced": "Advanced",
