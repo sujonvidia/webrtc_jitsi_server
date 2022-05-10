@@ -126,8 +126,8 @@
     }
 }
 
-#sideToolbarContainer svg{
-        fill: black;
+.smiley-button svg{
+    fill: black;
 }
 
 .chat-input-container {
@@ -591,4 +591,10 @@
     width: 48px;
     background: #36383C;
     border-radius: 3px;
+}
+.chat-dialog-header{
+    color: black !important;
+}
+.chat-header svg, .chat-dialog-header svg{
+    fill: black;
 }
