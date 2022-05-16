@@ -45,6 +45,7 @@ class ChatMessage extends AbstractChatMessage<Props> {
                     <div className = 'replywrapper'>
                         <div className = 'messagecontent'>
                             { this.props.showDisplayName && this._renderDisplayName() }
+                            { this.props.showTimestamp && this._renderTimestamp() }
                             <div className = 'usermessage'>
                                 <span className = 'sr-only'>
                                     { this.props.message.displayName === this.props.message.recipient
@@ -67,7 +68,7 @@ class ChatMessage extends AbstractChatMessage<Props> {
                             ) }
                     </div>
                 </div>
-                { this.props.showTimestamp && this._renderTimestamp() }
+                
             </div>
         );
     }
@@ -85,11 +86,11 @@ class ChatMessage extends AbstractChatMessage<Props> {
      */
     _renderDisplayName() {
         return (
-            <div
+            <span
                 aria-hidden = { true }
                 className = 'display-name'>
                 { this.props.message.displayName }
-            </div>
+            </span>
         );
     }
 
@@ -113,9 +114,9 @@ class ChatMessage extends AbstractChatMessage<Props> {
      */
     _renderTimestamp() {
         return (
-            <div className = 'timestamp'>
+            <span className = 'timestamp'>
                 { this._getFormattedTimestamp() }
-            </div>
+            </span>
         );
     }
 }
