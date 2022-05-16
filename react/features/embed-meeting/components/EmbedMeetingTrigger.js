@@ -51,7 +51,7 @@ function EmbedMeetingTrigger({ t, openEmbedDialog }: Props) {
     }
 
     return (
-        <div style={{display: 'none' }}
+        <div
             aria-label = { t('embedMeeting.title') }
             className = 'embed-meeting-trigger'
             onClick = { onClick }

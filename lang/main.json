@@ -21,8 +21,8 @@
         "outlookEmail": "Outlook Email",
         "phoneNumbers": "phone numbers",
         "searching": "Searching...",
-        "shareInvite": "Share meeting invitation",
-        "shareLink": "Share the meeting link to invite others",
+        "shareInvite": "Email the call invitation",
+        "shareLink": "Share the call link to invite others",
         "shareStream": "Share the live streaming link",
         "sipAddresses": "sip addresses",
         "telephone": "Telephone: {{number}}",
@@ -332,7 +332,7 @@
         "labelToolTip": "Audio and Video Communication on this call is end-to-end encrypted"
     },
     "embedMeeting": {
-        "title": "Embed this meeting"
+        "title": "Embed this call"
     },
     "virtualBackground": {
         "apply": "Apply",
@@ -530,7 +530,7 @@
     "participantsPane": {
         "headings": {
             "lobby": "Lobby ({{count}})",
-            "participantsList": "Meeting participants ({{count}})"
+            "participantsList": "Call Participants ({{count}})"
         },
         "actions": {
             "invite": "Share a call link to anyone",
