@@ -125,7 +125,7 @@ export const DISPLAY_AVATAR_WITH_NAME = 4;
  */
 export const DISPLAY_MODE_TO_CLASS_NAME = [
     'display-video',
-    'display-avatar-only',
+    'display-avatar-with-name',
     'display-name-on-black',
     'display-name-on-video',
     'display-avatar-with-name'

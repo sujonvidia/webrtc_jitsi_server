@@ -722,7 +722,7 @@ class Thumbnail extends Component<Props, State> {
         const { displayMode } = this.state;
         const { _isAudioOnly, _isDominantSpeakerDisabled, _isHidden, _participant } = this.props;
         const isRemoteParticipant = !_participant?.local && !_participant?.isFakeParticipant;
-
+        debugger;
         className += ` ${DISPLAY_MODE_TO_CLASS_NAME[displayMode]}`;
 
         if (_participant?.pinned) {
